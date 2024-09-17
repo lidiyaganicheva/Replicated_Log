@@ -1,0 +1,130 @@
+2024-09-17 18:24:25,872 - WARNING -  * Debugger is active!
+2024-09-17 18:24:25,873 - INFO -  * Debugger PIN: 107-627-331
+2024-09-17 18:24:35,101 - INFO - Received message: after each POST request, the message should be replicated on every Secondary server. Starting replication.
+2024-09-17 18:24:35,107 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:24:35,108 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:24:35,195 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:24:35,196 - INFO - Prepare execution time: 0.088816 s
+2024-09-17 18:24:38,116 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:24:38,117 - INFO - Prepare execution time: 3.008768 s
+2024-09-17 18:24:38,118 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:24:38,121 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:24:38,124 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:24:38,129 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 127
+2024-09-17 18:24:38,130 - INFO - Accept execution time: 0.005588 s
+2024-09-17 18:24:41,133 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 127
+2024-09-17 18:24:41,135 - INFO - Accept execution time: 3.013822 s
+2024-09-17 18:24:41,136 - INFO - Message 'after each POST request, the message should be replicated on every Secondary server' successfully replicated with proposal number 1.
+2024-09-17 18:24:41,137 - INFO - 172.18.0.1 - - [17/Sep/2024 18:24:41] "POST /send_data HTTP/1.1" 200 -
+2024-09-17 18:24:45,389 - INFO - Received message: Master should ensure that Secondaries have received a message via ACK. Starting replication.
+2024-09-17 18:24:45,391 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:24:45,394 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:24:49,404 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:24:49,406 - INFO - Prepare execution time: 4.014645 s
+2024-09-17 18:24:50,405 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:24:50,408 - INFO - Prepare execution time: 5.013327 s
+2024-09-17 18:24:50,409 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:24:50,414 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:24:50,419 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:24:51,428 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 113
+2024-09-17 18:24:51,431 - INFO - Accept execution time: 1.015435 s
+2024-09-17 18:24:54,430 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 113
+2024-09-17 18:24:54,433 - INFO - Accept execution time: 4.013572 s
+2024-09-17 18:24:54,434 - INFO - Message 'Master should ensure that Secondaries have received a message via ACK' successfully replicated with proposal number 2.
+2024-09-17 18:24:54,436 - INFO - 172.18.0.1 - - [17/Sep/2024 18:24:54] "POST /send_data HTTP/1.1" 200 -
+2024-09-17 18:24:57,894 - INFO - Received message: Master's POST request should be finished only after receiving ACKs from all Secondaries (blocking replication approach). Starting replication.
+2024-09-17 18:24:57,896 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:24:57,898 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:24:58,903 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:24:58,904 - INFO - Prepare execution time: 1.005183 s
+2024-09-17 18:25:01,902 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:25:01,903 - INFO - Prepare execution time: 4.006901 s
+2024-09-17 18:25:01,904 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:25:01,907 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:25:01,910 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:25:01,914 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 163
+2024-09-17 18:25:01,915 - INFO - Accept execution time: 0.005161 s
+2024-09-17 18:25:02,918 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 163
+2024-09-17 18:25:02,920 - INFO - Accept execution time: 1.012032 s
+2024-09-17 18:25:02,921 - INFO - Message 'Master's POST request should be finished only after receiving ACKs from all Secondaries (blocking replication approach)' successfully replicated with proposal number 3.
+2024-09-17 18:25:02,923 - INFO - 172.18.0.1 - - [17/Sep/2024 18:25:02] "POST /send_data HTTP/1.1" 200 -
+2024-09-17 18:25:08,629 - INFO - Received message: to test that the replication is blocking, introduce the delay/sleep on the Secondary. Starting replication.
+2024-09-17 18:25:08,630 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:25:08,631 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:25:10,640 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:25:10,642 - INFO - Prepare execution time: 2.010079 s
+2024-09-17 18:25:11,637 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:25:11,638 - INFO - Prepare execution time: 3.008202 s
+2024-09-17 18:25:11,639 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:25:11,640 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:25:11,642 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:25:11,645 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 128
+2024-09-17 18:25:11,646 - INFO - Accept execution time: 0.003797 s
+2024-09-17 18:25:13,650 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 128
+2024-09-17 18:25:13,655 - INFO - Accept execution time: 2.012444 s
+2024-09-17 18:25:13,656 - INFO - Message 'to test that the replication is blocking, introduce the delay/sleep on the Secondary' successfully replicated with proposal number 4.
+2024-09-17 18:25:13,657 - INFO - 172.18.0.1 - - [17/Sep/2024 18:25:13] "POST /send_data HTTP/1.1" 200 -
+2024-09-17 18:25:41,941 - INFO - Received message: at this stage assume that the communication channel is a perfect link (no failures and messages lost). Starting replication.
+2024-09-17 18:25:41,943 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:25:41,945 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:25:44,952 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:25:44,953 - INFO - Prepare execution time: 3.009196 s
+2024-09-17 18:25:46,957 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:25:46,959 - INFO - Prepare execution time: 5.013501 s
+2024-09-17 18:25:46,960 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:25:46,966 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:25:46,972 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:25:48,978 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 145
+2024-09-17 18:25:48,979 - INFO - Accept execution time: 2.013694 s
+2024-09-17 18:25:51,983 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 145
+2024-09-17 18:25:51,986 - INFO - Accept execution time: 5.014844 s
+2024-09-17 18:25:51,987 - INFO - Message 'at this stage assume that the communication channel is a perfect link (no failures and messages lost)' successfully replicated with proposal number 5.
+2024-09-17 18:25:51,988 - INFO - 172.18.0.1 - - [17/Sep/2024 18:25:51] "POST /send_data HTTP/1.1" 200 -
+2024-09-17 18:26:03,225 - INFO - Received message: any RPC framework can be used for Master-Secondary communication (Sockets, language-specific RPC, HTTP, Rest, gRPC, ...). Starting replication.
+2024-09-17 18:26:03,227 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:26:03,227 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:26:05,233 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:26:05,234 - INFO - Prepare execution time: 2.005847 s
+2024-09-17 18:26:06,236 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:26:06,238 - INFO - Prepare execution time: 3.010451 s
+2024-09-17 18:26:06,239 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:26:06,242 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:26:06,245 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:26:07,252 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 164
+2024-09-17 18:26:07,255 - INFO - Accept execution time: 1.008852 s
+2024-09-17 18:26:08,249 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 164
+2024-09-17 18:26:08,250 - INFO - Accept execution time: 2.007586 s
+2024-09-17 18:26:08,250 - INFO - Message 'any RPC framework can be used for Master-Secondary communication (Sockets, language-specific RPC, HTTP, Rest, gRPC, ...)' successfully replicated with proposal number 6.
+2024-09-17 18:26:08,251 - INFO - 172.18.0.1 - - [17/Sep/2024 18:26:08] "POST /send_data HTTP/1.1" 200 -
+2024-09-17 18:26:16,655 - INFO - Received message: your implementation should support logging. Starting replication.
+2024-09-17 18:26:16,657 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:26:16,659 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:26:18,665 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:26:18,666 - INFO - Prepare execution time: 2.006207 s
+2024-09-17 18:26:20,669 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:26:20,671 - INFO - Prepare execution time: 4.012954 s
+2024-09-17 18:26:20,673 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:26:20,677 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:26:20,681 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:26:24,693 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 86
+2024-09-17 18:26:24,696 - INFO - Accept execution time: 4.014079 s
+2024-09-17 18:26:25,694 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 86
+2024-09-17 18:26:25,699 - INFO - Accept execution time: 5.020344 s
+2024-09-17 18:26:25,701 - INFO - Message 'your implementation should support logging' successfully replicated with proposal number 7.
+2024-09-17 18:26:25,702 - INFO - 172.18.0.1 - - [17/Sep/2024 18:26:25] "POST /send_data HTTP/1.1" 200 -
+2024-09-17 18:26:28,769 - INFO - Received message: Master and Secondaries should run in Docker. Starting replication.
+2024-09-17 18:26:28,772 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:26:28,774 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:26:28,777 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:26:28,778 - INFO - Prepare execution time: 0.004511 s
+2024-09-17 18:26:32,780 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 50
+2024-09-17 18:26:32,782 - INFO - Prepare execution time: 4.009469 s
+2024-09-17 18:26:32,782 - INFO - Quorum reached. Sending accept requests.
+2024-09-17 18:26:32,786 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-09-17 18:26:32,789 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-09-17 18:26:32,793 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 87
+2024-09-17 18:26:32,794 - INFO - Accept execution time: 0.009011 s
+2024-09-17 18:26:33,797 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 87
+2024-09-17 18:26:33,798 - INFO - Accept execution time: 1.008678 s
+2024-09-17 18:26:33,799 - INFO - Message 'Master and Secondaries should run in Docker' successfully replicated with proposal number 8.
+2024-09-17 18:26:33,800 - INFO - 172.18.0.1 - - [17/Sep/2024 18:26:33] "POST /send_data HTTP/1.1" 200 -
