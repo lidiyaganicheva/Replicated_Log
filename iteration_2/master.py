@@ -27,9 +27,6 @@ message_queue = Queue()
 # List to store processed messages in order of proposal_number
 processed_messages = []
 
-# Lock to manage access to processed_messages
-processed_messages_lock = threading.Lock()
-
 secondary_nodes = ["http://" + x + "/" for x in os.environ["SECONDARY_HOSTS"].split(",")]
 
 global_proposal_number = 1
@@ -114,7 +111,7 @@ def replicate_message(message_data):
         accept_responses = []
         threads = []
 
-        # Reset the semaphore
+        # Create new semaphore for replication
         semaphore = threading.Semaphore(0)
 
         for node in secondary_nodes:
@@ -128,7 +125,7 @@ def replicate_message(message_data):
 
         if len(accept_responses) >= quorum_size:
             # Add the message to processed_messages list in a thread-safe way
-            with processed_messages_lock:
+            with lock:
                 processed_messages.append({
                     "proposal_number": proposal_number,
                     "message": message,
@@ -164,10 +161,9 @@ def process_message_queue():
 # Route for handling GET requests
 @app.route('/', methods=['GET'])
 def handle_get():
-    with processed_messages_lock:
-        # Sort messages by proposal_number
-        sorted_messages = sorted(processed_messages, key=lambda x: x['proposal_number'])
-        return jsonify(sorted_messages), 200
+    # Sort messages by proposal_number
+    sorted_messages = sorted(processed_messages, key=lambda x: x['proposal_number'])
+    return jsonify(sorted_messages), 200
 
 
 # HTTP endpoint to receive data at master node
