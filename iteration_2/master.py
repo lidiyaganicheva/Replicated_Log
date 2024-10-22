@@ -6,8 +6,7 @@ import os
 
 from flask import Flask, request, jsonify
 from queue import Queue
-from concurrent.futures import ThreadPoolExecutor, wait
-from time import sleep
+from concurrent.futures import ThreadPoolExecutor
 
 # Set up logging configuration
 
@@ -61,19 +60,21 @@ def send_accept(node_url, proposal_num, write_concern, message):
 
 
 # Thread function for prepare phase
-def handle_prepare_for_node(node_url, proposal_num, prepare_responses, lock):
+def handle_prepare_for_node(node_url, proposal_num, prepare_responses, lock, semaphore):
     response = send_prepare(node_url, proposal_num)
     if response and response.get("status") == "promise":
         with lock:
             prepare_responses.append(response)
+        semaphore.release()
 
 
 # Thread function for accept phase
-def handle_accept_for_node(node_url, proposal_num, message, accept_responses, write_concern, lock):
+def handle_accept_for_node(node_url, proposal_num, message, accept_responses, write_concern, lock, semaphore):
     response = send_accept(node_url, proposal_num, write_concern, message)
     if response and response.get("status") == "accepted":
         with lock:
             accept_responses.append(response)
+        semaphore.release()
 
 
 # Function to replicate message using Paxos and block until all ACKs are received
@@ -84,6 +85,8 @@ def replicate_message(message_data):
     prepare_responses = []
     threads = []
     lock = threading.Lock()
+    # Initializing semaphore to count the finished threads
+    semaphore = threading.Semaphore(0)
     # Set write concern not more or less than number of existing nodes
     if (write_concern < 1) | (write_concern > len(secondary_nodes) + 1):
         quorum_size = (len(secondary_nodes) // 2) + 1  # Majority of nodes - default
@@ -95,13 +98,13 @@ def replicate_message(message_data):
 
     # Prepare phase: send prepare requests to all secondary nodes in threads
     for node in secondary_nodes:
-        thread = threading.Thread(target=handle_prepare_for_node, args=(node, proposal_number, prepare_responses, lock))
+        thread = threading.Thread(target=handle_prepare_for_node, args=(node, proposal_number, prepare_responses, lock, semaphore))
         threads.append(thread)
         thread.start()
 
-    # Wait for write concern -1 number of threads to complete
-    while len(prepare_responses) < quorum_size:
-        sleep(0.1)
+    # Wait for quorum_size threads to complete using the semaphore
+    for _ in range(quorum_size):
+        semaphore.acquire()  # Blocks until a thread finishes
 
     # Check if we have quorum
     if len(prepare_responses) >= quorum_size:
@@ -110,15 +113,18 @@ def replicate_message(message_data):
         # Accept phase: Propose the value to all secondary nodes in threads
         accept_responses = []
         threads = []
+
+        # Reset the semaphore
+        semaphore = threading.Semaphore(0)
+
         for node in secondary_nodes:
             thread = threading.Thread(target=handle_accept_for_node,
-                                      args=(node, proposal_number, message, accept_responses, write_concern, lock))
+                                      args=(node, proposal_number, message, accept_responses, write_concern, lock, semaphore))
             threads.append(thread)
             thread.start()
 
-        # Wait for write concern -1 number of threads to complete
-        while len(accept_responses) < quorum_size:
-            sleep(0.1)
+        for _ in range(quorum_size):
+            semaphore.acquire()  # Blocks until a thread finishes
 
         if len(accept_responses) >= quorum_size:
             # Add the message to processed_messages list in a thread-safe way
