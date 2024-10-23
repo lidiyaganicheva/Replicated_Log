@@ -1,117 +1,106 @@
-2024-10-22 19:44:48,330 - INFO - Starting HTTP connection at Master
-2024-10-22 19:44:48,334 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-10-23 08:29:47,949 - INFO - Starting HTTP connection at Master
+2024-10-23 08:29:47,951 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:9000
- * Running on http://172.19.0.4:9000
-2024-10-22 19:44:48,334 - INFO - [33mPress CTRL+C to quit[0m
-2024-10-22 19:44:54,483 - INFO - Received message: Current iteration should provide tunable semi-synchronicity for replication, by defining write concern parameters.. Assigning proposal_number: 1. Adding to queue for Paxos replication with write_concern: 2
-2024-10-22 19:44:54,483 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:54] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:54,484 - INFO - Processing message from queue: Current iteration should provide tunable semi-synchronicity for replication, by defining write concern parameters. with proposal_number: 1 and write_concern: 2
-2024-10-22 19:44:54,489 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:54,490 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:54,495 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:54,496 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
-2024-10-22 19:44:54,498 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:54,500 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:54,504 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 149
-2024-10-22 19:44:54,505 - INFO - Successfully replicated message: Current iteration should provide tunable semi-synchronicity for replication, by defining write concern parameters. with proposal_number: 1 and write concern 2
-2024-10-22 19:44:55,101 - INFO - Received message: client POST request in addition to the message should also contain write concern parameter w=1,2,3,..,n.. Assigning proposal_number: 2. Adding to queue for Paxos replication with write_concern: 2
-2024-10-22 19:44:55,102 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:55] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:55,103 - INFO - Processing message from queue: client POST request in addition to the message should also contain write concern parameter w=1,2,3,..,n. with proposal_number: 2 and write_concern: 2
-2024-10-22 19:44:55,106 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:55,109 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:55,113 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:55,114 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
-2024-10-22 19:44:55,116 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:55,118 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:55,123 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 139
-2024-10-22 19:44:55,124 - INFO - Successfully replicated message: client POST request in addition to the message should also contain write concern parameter w=1,2,3,..,n. with proposal_number: 2 and write concern 2
-2024-10-22 19:44:55,707 - INFO - Received message: w value specifies how many ACKs the master should receive from secondaries before responding to the client. Assigning proposal_number: 3. Adding to queue for Paxos replication with write_concern: 3
-2024-10-22 19:44:55,708 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:55] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:55,708 - INFO - Processing message from queue: w value specifies how many ACKs the master should receive from secondaries before responding to the client with proposal_number: 3 and write_concern: 3
-2024-10-22 19:44:55,711 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:55,713 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:55,716 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:56,397 - INFO - Received message: w = 1 - only from master. Assigning proposal_number: 4. Adding to queue for Paxos replication with write_concern: 3
-2024-10-22 19:44:56,398 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:56] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:56,399 - INFO - Processing message from queue: w = 1 - only from master with proposal_number: 4 and write_concern: 3
-2024-10-22 19:44:56,401 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:56,403 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:56,407 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:57,054 - INFO - Received message: w = 2 - from master and one secondary. Assigning proposal_number: 5. Adding to queue for Paxos replication with write_concern: 1
-2024-10-22 19:44:57,054 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:57] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:57,054 - INFO - Processing message from queue: w = 2 - from master and one secondary with proposal_number: 5 and write_concern: 1
-2024-10-22 19:44:57,057 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:57,059 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:57,059 - INFO - Quorum reached. 0 nodes send promises. Sending accept requests.
-2024-10-22 19:44:57,063 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:57,063 - INFO - Successfully replicated message: w = 2 - from master and one secondary with proposal_number: 5 and write concern 1
-2024-10-22 19:44:57,065 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:57,066 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:57,070 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 72
-2024-10-22 19:44:57,642 - INFO - Received message: w = 3 - from master and two secondaries. Assigning proposal_number: 6. Adding to queue for Paxos replication with write_concern: 0
-2024-10-22 19:44:57,643 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:57] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:57,644 - INFO - Processing message from queue: w = 3 - from master and two secondaries with proposal_number: 6 and write_concern: 0
-2024-10-22 19:44:57,647 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:57,650 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:57,654 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:58,291 - INFO - Received message: Please emulate replicas inconsistency (and eventual consistency) with the master by introducing the artificial delay on the secondary node.. Assigning proposal_number: 7. Adding to queue for Paxos replication with write_concern: 4
-2024-10-22 19:44:58,292 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:58] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:58,293 - INFO - Processing message from queue: Please emulate replicas inconsistency (and eventual consistency) with the master by introducing the artificial delay on the secondary node. with proposal_number: 7 and write_concern: 4
-2024-10-22 19:44:58,297 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:58,300 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:58,306 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:58,943 - INFO - Received message:  In this case, the master and secondary should temporarily return different messages lists.. Assigning proposal_number: 8. Adding to queue for Paxos replication with write_concern: 1
-2024-10-22 19:44:58,944 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:58] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:58,944 - INFO - Processing message from queue:  In this case, the master and secondary should temporarily return different messages lists. with proposal_number: 8 and write_concern: 1
-2024-10-22 19:44:58,950 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:58,952 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:58,952 - INFO - Quorum reached. 0 nodes send promises. Sending accept requests.
-2024-10-22 19:44:58,956 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:58,958 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:58,959 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:44:58,960 - INFO - Successfully replicated message:  In this case, the master and secondary should temporarily return different messages lists. with proposal_number: 8 and write concern 1
-2024-10-22 19:44:58,963 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 126
-2024-10-22 19:44:59,579 - INFO - Received message: Add logic for messages deduplication and to guarantee the total ordering of messages.. Assigning proposal_number: 9. Adding to queue for Paxos replication with write_concern: 3
-2024-10-22 19:44:59,580 - INFO - 172.19.0.1 - - [22/Oct/2024 19:44:59] "POST /send_data HTTP/1.1" 200 -
-2024-10-22 19:44:59,581 - INFO - Processing message from queue: Add logic for messages deduplication and to guarantee the total ordering of messages. with proposal_number: 9 and write_concern: 3
-2024-10-22 19:44:59,584 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:44:59,587 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:44:59,590 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:14,513 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:14,513 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 149
-2024-10-22 19:45:14,515 - INFO - Message 'Current iteration should provide tunable semi-synchronicity for replication, by defining write concern parameters.' with proposal number 1 and write concern 2 is replicated to all nodes.
-2024-10-22 19:45:15,131 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:15,131 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 139
-2024-10-22 19:45:15,133 - INFO - Message 'client POST request in addition to the message should also contain write concern parameter w=1,2,3,..,n.' with proposal number 2 and write concern 2 is replicated to all nodes.
-2024-10-22 19:45:15,725 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:15,726 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
-2024-10-22 19:45:15,728 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:45:15,730 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:45:15,734 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 141
-2024-10-22 19:45:16,428 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:16,430 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
-2024-10-22 19:45:16,432 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:45:16,434 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:45:16,437 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 59
-2024-10-22 19:45:17,082 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 72
-2024-10-22 19:45:17,082 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:17,083 - INFO - Message 'w = 2 - from master and one secondary' with proposal number 5 and write concern 1 is replicated to all nodes.
-2024-10-22 19:45:17,671 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:17,672 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
-2024-10-22 19:45:17,679 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:45:17,680 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:45:17,693 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 74
-2024-10-22 19:45:18,327 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:18,328 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
-2024-10-22 19:45:18,330 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:45:18,332 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:45:18,336 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 174
-2024-10-22 19:45:18,962 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:18,982 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 126
-2024-10-22 19:45:18,983 - INFO - Message ' In this case, the master and secondary should temporarily return different messages lists.' with proposal number 8 and write concern 1 is replicated to all nodes.
-2024-10-22 19:45:19,601 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
-2024-10-22 19:45:19,603 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
-2024-10-22 19:45:19,605 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
-2024-10-22 19:45:19,606 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
-2024-10-22 19:45:19,610 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 120
+ * Running on http://172.19.0.3:9000
+2024-10-23 08:29:47,952 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-23 08:30:07,625 - INFO - Received message: message 1. Assigning proposal_number: 1. Adding to queue for replication with write_concern: 3
+2024-10-23 08:30:07,625 - INFO - Processing message from queue: message 1 with proposal_number: 1 and write_concern: 3
+2024-10-23 08:30:07,632 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:07,634 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:07,639 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:12,845 - INFO - Received message: message 2. Assigning proposal_number: 2. Adding to queue for replication with write_concern: 2
+2024-10-23 08:30:12,846 - INFO - Processing message from queue: message 2 with proposal_number: 2 and write_concern: 2
+2024-10-23 08:30:12,850 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:12,854 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:12,860 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:12,861 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
+2024-10-23 08:30:12,863 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:12,866 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:12,872 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:12,874 - INFO - Successfully replicated message: message 2 with proposal_number: 2 and write concern 2
+2024-10-23 08:30:12,875 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:12] "POST /send_data HTTP/1.1" 200 -
+2024-10-23 08:30:15,488 - INFO - Received message: message 3. Assigning proposal_number: 3. Adding to queue for replication with write_concern: 1
+2024-10-23 08:30:15,489 - INFO - Processing message from queue: message 3 with proposal_number: 3 and write_concern: 1
+2024-10-23 08:30:15,491 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:15,492 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:15,493 - INFO - Quorum reached. 0 nodes send promises. Sending accept requests.
+2024-10-23 08:30:15,495 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:15,496 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:15,497 - INFO - Successfully replicated message: message 3 with proposal_number: 3 and write concern 1
+2024-10-23 08:30:15,497 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:15,498 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:15] "POST /send_data HTTP/1.1" 200 -
+2024-10-23 08:30:15,502 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:17,466 - INFO - Received message: message 4. Assigning proposal_number: 4. Adding to queue for replication with write_concern: 0
+2024-10-23 08:30:17,468 - INFO - Processing message from queue: message 4 with proposal_number: 4 and write_concern: 0
+2024-10-23 08:30:17,471 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:17,473 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:17,477 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:23,003 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:23] "GET / HTTP/1.1" 200 -
+2024-10-23 08:30:27,661 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:27,663 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
+2024-10-23 08:30:27,666 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:27,669 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:27,674 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:32,859 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:32,890 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:32,891 - INFO - Message 'message 2' with proposal number 2 and write concern 2 is replicated to all nodes.
+2024-10-23 08:30:35,517 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:35,520 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:35,522 - INFO - Message 'message 3' with proposal number 3 and write concern 1 is replicated to all nodes.
+2024-10-23 08:30:37,494 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:37,496 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
+2024-10-23 08:30:37,499 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:37,502 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:37,508 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:47,698 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:47,702 - INFO - Successfully replicated message: message 1 with proposal_number: 1 and write concern 3
+2024-10-23 08:30:47,704 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:47] "POST /send_data HTTP/1.1" 200 -
+2024-10-23 08:30:47,704 - INFO - Message 'message 1' with proposal number 1 and write concern 3 is replicated to all nodes.
+2024-10-23 08:30:50,446 - INFO - Received message: message 5. Assigning proposal_number: 5. Adding to queue for replication with write_concern: 4
+2024-10-23 08:30:50,447 - INFO - Processing message from queue: message 5 with proposal_number: 5 and write_concern: 4
+2024-10-23 08:30:50,448 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:30:50,451 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:30:50,457 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:30:57,529 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 44
+2024-10-23 08:30:57,530 - INFO - Successfully replicated message: message 4 with proposal_number: 4 and write concern 0
+2024-10-23 08:30:57,531 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:57] "POST /send_data HTTP/1.1" 200 -
+2024-10-23 08:30:57,531 - INFO - Message 'message 4' with proposal number 4 and write concern 0 is replicated to all nodes.
+2024-10-23 08:31:07,670 - INFO - Received message: message 6. Assigning proposal_number: 6. Adding to queue for replication with write_concern: 1
+2024-10-23 08:31:07,671 - INFO - Processing message from queue: message 6 with proposal_number: 6 and write_concern: 1
+2024-10-23 08:31:07,674 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:31:07,678 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:31:07,679 - INFO - Quorum reached. 0 nodes send promises. Sending accept requests.
+2024-10-23 08:31:07,682 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:31:07,686 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:31:07,687 - INFO - Successfully replicated message: message 6 with proposal_number: 6 and write concern 1
+2024-10-23 08:31:07,688 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:31:07,690 - INFO - 172.19.0.1 - - [23/Oct/2024 08:31:07] "POST /send_data HTTP/1.1" 200 -
+2024-10-23 08:31:07,694 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 44
+2024-10-23 08:31:10,475 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:31:10,476 - INFO - Quorum reached. 2 nodes send promises. Sending accept requests.
+2024-10-23 08:31:10,478 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:31:10,481 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:31:10,486 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 44
+2024-10-23 08:31:16,929 - INFO - Received message: message 7. Assigning proposal_number: 7. Adding to queue for replication with write_concern: 2
+2024-10-23 08:31:16,929 - INFO - Processing message from queue: message 7 with proposal_number: 7 and write_concern: 2
+2024-10-23 08:31:16,933 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:31:16,934 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:31:16,939 - DEBUG - http://secondary_1:9001 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:31:16,941 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
+2024-10-23 08:31:16,945 - DEBUG - Starting new HTTP connection (1): secondary_2:9002
+2024-10-23 08:31:16,946 - DEBUG - Starting new HTTP connection (1): secondary_1:9001
+2024-10-23 08:31:16,951 - DEBUG - http://secondary_1:9001 "POST /accept HTTP/11" 200 44
+2024-10-23 08:31:16,952 - INFO - Successfully replicated message: message 7 with proposal_number: 7 and write concern 2
+2024-10-23 08:31:16,952 - INFO - 172.19.0.1 - - [23/Oct/2024 08:31:16] "POST /send_data HTTP/1.1" 200 -
+2024-10-23 08:31:27,707 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41
+2024-10-23 08:31:27,711 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 44
+2024-10-23 08:31:27,714 - INFO - Message 'message 6' with proposal number 6 and write concern 1 is replicated to all nodes.
+2024-10-23 08:31:30,510 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 44
+2024-10-23 08:31:30,513 - INFO - Successfully replicated message: message 5 with proposal_number: 5 and write concern 4
+2024-10-23 08:31:30,516 - INFO - 172.19.0.1 - - [23/Oct/2024 08:31:30] "POST /send_data HTTP/1.1" 200 -
+2024-10-23 08:31:30,517 - INFO - Message 'message 5' with proposal number 5 and write concern 4 is replicated to all nodes.
+2024-10-23 08:31:35,794 - INFO - 172.19.0.1 - - [23/Oct/2024 08:31:35] "GET / HTTP/1.1" 200 -
+2024-10-23 08:31:36,953 - DEBUG - http://secondary_2:9002 "POST /accept HTTP/11" 200 44
+2024-10-23 08:31:36,954 - INFO - Message 'message 7' with proposal number 7 and write concern 2 is replicated to all nodes.
+2024-10-23 08:31:36,955 - DEBUG - http://secondary_2:9002 "POST /prepare HTTP/11" 200 41

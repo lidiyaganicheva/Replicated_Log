@@ -6,7 +6,6 @@ import os
 
 from flask import Flask, request, jsonify
 from queue import Queue
-from concurrent.futures import ThreadPoolExecutor
 
 # Set up logging configuration
 
@@ -75,7 +74,7 @@ def handle_accept_for_node(node_url, proposal_num, message, accept_responses, wr
 
 
 # Function to replicate message using Paxos and block until all ACKs are received
-def replicate_message(message_data):
+def replicate_message(message_data, post_semaphore):
     message = message_data['message']
     proposal_number = message_data['proposal_number']
     write_concern = message_data['write_concern']
@@ -131,6 +130,7 @@ def replicate_message(message_data):
                     "message": message,
                     "write_concern": write_concern
                 })
+            post_semaphore.release()
             logging.info(f"Successfully replicated message: {message} with proposal_number: "
                          f"{proposal_number} and write concern {write_concern}")
             # Wait for all not yet completed threads in the accept phase to complete
@@ -139,6 +139,7 @@ def replicate_message(message_data):
                     thread.join()
 
             if len(accept_responses) == len(secondary_nodes):
+                message_queue.task_done()
                 logging.info(f"Message '{message}' with proposal number {proposal_number} "
                              f"and write concern {write_concern} is replicated to all nodes.")
             else:
@@ -147,15 +148,6 @@ def replicate_message(message_data):
         else:
             logging.error(f"Failed to replicate message: {message} with "
                           f"proposal_number: {proposal_number} and write concern {write_concern}")
-
-
-# Function to process the message queue in parallel using a thread pool
-def process_message_queue():
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        while True:
-            message_data = message_queue.get()  # Blocking call to wait for a message
-            executor.submit(replicate_message, message_data)  # Submit message for parallel processing
-            message_queue.task_done()
 
 
 # Route for handling GET requests
@@ -173,10 +165,13 @@ def receive_data():
     data = request.json
     message = data.get("message")
     write_concern = data.get("write_concern")
+    max_write_concern = len(secondary_nodes)+1 \
+        if (write_concern < 0) | (write_concern > (len(secondary_nodes)+1)) else write_concern
 
     if message:
         logging.info(
-            f"Received message: {message}. Assigning proposal_number: {global_proposal_number}. Adding to queue for Paxos replication with write_concern: {write_concern}")
+            f"Received message: {message}. Assigning proposal_number: {global_proposal_number}. Adding to queue for replication with write_concern: {write_concern}")
+
         # Assign a unique proposal number and increment it
         proposal_number = global_proposal_number
         global_proposal_number += 1
@@ -188,7 +183,16 @@ def receive_data():
             "write_concern": write_concern
         })
 
-        return jsonify({"status": "success", "message": "Data added to queue for replication"}), 200
+        # Get message from a queue and process it
+        post_semaphore = threading.Semaphore(0)
+        message_data = message_queue.get()
+        worker_thread = threading.Thread(target=replicate_message, args=(message_data, post_semaphore), daemon=True)
+        worker_thread.start()
+        post_semaphore.acquire()
+
+        return jsonify({"status": "success",
+                        "message": f"Data is successfully replicated to {max_write_concern} "
+                                   f"of nodes with proposal_number {proposal_number}"}), 200
     else:
         return jsonify({"status": "error", "message": "No message provided"}), 400
 
@@ -196,6 +200,5 @@ def receive_data():
 # Main entry point
 if __name__ == '__main__':
     # Start the message processing thread
-    threading.Thread(target=process_message_queue, daemon=True).start()
     logging.info("Starting HTTP connection at Master")
     app.run(host='0.0.0.0', port=9000, debug=False)

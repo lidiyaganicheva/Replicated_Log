@@ -1,33 +1,30 @@
-2024-10-22 19:44:48,210 - INFO - Starting HTTP connection at secondary_2
-2024-10-22 19:44:48,215 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-10-23 08:29:47,541 - INFO - Starting HTTP connection at secondary_2
+2024-10-23 08:29:47,545 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:9002
  * Running on http://172.19.0.2:9002
-2024-10-22 19:44:48,215 - INFO - [33mPress CTRL+C to quit[0m
-2024-10-22 19:44:54,503 - INFO - secondary_2 is sleeping
-2024-10-22 19:44:55,121 - INFO - secondary_2 is sleeping
-2024-10-22 19:44:57,069 - INFO - secondary_2 is sleeping
-2024-10-22 19:44:58,962 - INFO - secondary_2 is sleeping
-2024-10-22 19:45:14,512 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:14] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:14,512 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:14] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:15,130 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:15] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:15,130 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:15] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:15,724 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:15] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:15,733 - INFO - secondary_2 is sleeping
-2024-10-22 19:45:16,427 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:16] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:16,436 - INFO - secondary_2 is sleeping
-2024-10-22 19:45:17,080 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:17] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:17,081 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:17] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:17,670 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:17] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:17,686 - INFO - secondary_2 is sleeping
-2024-10-22 19:45:18,326 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:18] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:18,335 - INFO - secondary_2 is sleeping
-2024-10-22 19:45:18,961 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:18] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:18,981 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:18] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:19,600 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:19] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:19,609 - INFO - secondary_2 is sleeping
-2024-10-22 19:45:35,752 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:35] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:36,455 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:36] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:37,705 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:37] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:38,349 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:38] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:39,609 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:39] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:29:47,545 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-23 08:30:12,870 - INFO - secondary_2 is sleeping
+2024-10-23 08:30:15,502 - INFO - secondary_2 is sleeping
+2024-10-23 08:30:24,942 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:24] "GET / HTTP/1.1" 200 -
+2024-10-23 08:30:27,659 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:27] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:27,674 - INFO - secondary_2 is sleeping
+2024-10-23 08:30:29,788 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:29] "GET / HTTP/1.1" 200 -
+2024-10-23 08:30:32,857 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:32] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:32,888 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:32] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:30:35,516 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:35] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:35,517 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:35] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:30:37,493 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:37] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:37,507 - INFO - secondary_2 is sleeping
+2024-10-23 08:30:47,693 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:47] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:30:57,528 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:57] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:31:07,694 - INFO - secondary_2 is sleeping
+2024-10-23 08:31:10,474 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:10] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:31:10,485 - INFO - secondary_2 is sleeping
+2024-10-23 08:31:16,949 - INFO - secondary_2 is sleeping
+2024-10-23 08:31:27,705 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:27] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:31:27,709 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:27] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:31:30,508 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:30] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:31:36,952 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:36] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:31:36,955 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:36] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:31:41,789 - INFO - 172.19.0.1 - - [23/Oct/2024 08:31:41] "GET / HTTP/1.1" 200 -

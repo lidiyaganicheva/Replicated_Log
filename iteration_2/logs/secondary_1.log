@@ -1,24 +1,23 @@
-2024-10-22 19:44:48,238 - INFO - Starting HTTP connection at secondary_1
-2024-10-22 19:44:48,243 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-10-23 08:29:47,850 - INFO - Starting HTTP connection at secondary_1
+2024-10-23 08:29:47,854 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:9001
- * Running on http://172.19.0.3:9001
-2024-10-22 19:44:48,244 - INFO - [33mPress CTRL+C to quit[0m
-2024-10-22 19:44:54,494 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:54] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:54,503 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:54] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:44:55,112 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:55] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:55,122 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:55] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:44:55,715 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:55] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:56,406 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:56] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:57,066 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:57] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:57,069 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:57] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:44:57,653 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:57] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:58,305 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:58] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:58,956 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:58] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:44:58,963 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:58] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:44:59,589 - INFO - 172.19.0.4 - - [22/Oct/2024 19:44:59] "POST /prepare HTTP/1.1" 200 -
-2024-10-22 19:45:15,733 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:15] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:16,436 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:16] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:17,689 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:17] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:18,335 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:18] "POST /accept HTTP/1.1" 200 -
-2024-10-22 19:45:19,609 - INFO - 172.19.0.4 - - [22/Oct/2024 19:45:19] "POST /accept HTTP/1.1" 200 -
+ * Running on http://172.19.0.4:9001
+2024-10-23 08:29:47,854 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-23 08:29:48,705 - INFO - 172.19.0.1 - - [23/Oct/2024 08:29:48] "GET / HTTP/1.1" 200 -
+2024-10-23 08:30:07,638 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:07] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:12,858 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:12] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:12,870 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:12] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:30:15,496 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:15] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:15,501 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:15] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:30:17,476 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:17] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:30:26,275 - INFO - 172.19.0.1 - - [23/Oct/2024 08:30:26] "GET / HTTP/1.1" 200 -
+2024-10-23 08:30:27,673 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:27] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:30:37,507 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:37] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:30:50,455 - INFO - 172.19.0.3 - - [23/Oct/2024 08:30:50] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:31:07,685 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:07] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:31:07,692 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:07] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:31:10,485 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:10] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:31:16,938 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:16] "POST /prepare HTTP/1.1" 200 -
+2024-10-23 08:31:16,949 - INFO - 172.19.0.3 - - [23/Oct/2024 08:31:16] "POST /accept HTTP/1.1" 200 -
+2024-10-23 08:31:53,878 - INFO - 172.19.0.1 - - [23/Oct/2024 08:31:53] "GET / HTTP/1.1" 200 -
