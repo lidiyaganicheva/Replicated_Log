@@ -1,0 +1,24 @@
+2024-10-28 20:48:34,533 - INFO - Starting HTTP connection at secondary_2
+2024-10-28 20:48:34,539 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9002
+ * Running on http://172.20.0.3:9002
+2024-10-28 20:48:34,539 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-28 20:48:36,907 - INFO - 172.20.0.1 - - [28/Oct/2024 20:48:36] "GET / HTTP/1.1" 200 -
+2024-10-28 20:48:39,603 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:39] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:40,405 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:40] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:42,046 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:42] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:42,170 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:48:42,172 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:42] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:45,240 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:45] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:46,302 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:48:46,304 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:46] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:47,802 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:47] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:49,685 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:49] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:54,850 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:48:54,850 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:54] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:55,733 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:48:55,734 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:55] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:58,194 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:58] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:59,186 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:59] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:49:12,240 - INFO - 172.20.0.1 - - [28/Oct/2024 20:49:12] "GET / HTTP/1.1" 200 -

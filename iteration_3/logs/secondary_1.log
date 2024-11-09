@@ -1,0 +1,106 @@
+2024-10-28 20:46:51,041 - INFO - Starting HTTP connection at secondary_1
+2024-10-28 20:46:51,048 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9001
+ * Running on http://172.20.0.2:9001
+2024-10-28 20:46:51,048 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-28 20:46:51,171 - INFO - 172.20.0.4 - - [28/Oct/2024 20:46:51] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:47:01,174 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:01] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:47:11,180 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:11] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:47:19,411 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:19] "POST /prepare HTTP/1.1" 200 -
+2024-10-28 20:47:19,418 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:19] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:21,193 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:21] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:47:22,507 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:22] "POST /prepare HTTP/1.1" 200 -
+2024-10-28 20:47:22,513 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:47:22,514 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:22] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:24,555 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:24] "POST /prepare HTTP/1.1" 200 -
+2024-10-28 20:47:24,563 - INFO - Sending false reject to master for message Msg3 with proposal number 3
+2024-10-28 20:47:24,564 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:24] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:25,869 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:25] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:25,925 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:47:25,926 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:25] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:29,767 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:29] "POST /prepare HTTP/1.1" 200 -
+2024-10-28 20:47:29,777 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:29] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:31,197 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:31] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:47:31,240 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:31] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:32,416 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:47:32,417 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:32] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:32,467 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:32] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:36,219 - INFO - Sending false reject to master for message Msg4 with proposal number 4
+2024-10-28 20:47:36,219 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:36] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:38,261 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:38] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:38,893 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:47:38,894 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:38] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:39,566 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:39] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:41,203 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:41] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:47:41,674 - INFO - 172.20.0.1 - - [28/Oct/2024 20:47:41] "GET / HTTP/1.1" 200 -
+2024-10-28 20:47:43,345 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:43] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:45,493 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:45] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:45,705 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:45] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:46,351 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:46] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:49,680 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:49] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:51,216 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:51] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:47:52,083 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:47:52,084 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:52] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:52,383 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:52] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:52,856 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:47:52,857 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:52] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:56,405 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:56] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:58,918 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:58] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:47:59,338 - INFO - 172.20.0.4 - - [28/Oct/2024 20:47:59] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:00,045 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:48:00,046 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:00] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:01,226 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:01] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:48:02,966 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:02] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:05,384 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:48:05,385 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:05] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:05,829 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:05] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:06,579 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:48:06,580 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:06] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:09,356 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:09] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:11,236 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:11] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:48:12,508 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:12] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:12,919 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:12] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:13,854 - INFO - Sending false reject to master for message Msg2 with proposal number 2
+2024-10-28 20:48:13,855 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:13] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:16,226 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:16] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:19,556 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:19] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:19,568 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:19] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:20,343 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:20] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:21,244 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:21] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:48:22,760 - INFO - Sending false reject to master for message Msg4 with proposal number 4
+2024-10-28 20:48:22,761 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:22] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:25,965 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:48:25,966 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:25] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:26,607 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:26] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:27,182 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:27] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:29,354 - INFO - Sending false reject to master for message Msg4 with proposal number 4
+2024-10-28 20:48:29,356 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:29] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:31,255 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:31] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:48:32,877 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:32] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:32,947 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:32] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:34,321 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:34] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:36,400 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:36] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:38,165 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:38] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:39,603 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:39] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:40,039 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:48:40,041 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:40] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:41,266 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:41] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:48:43,235 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:43] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:44,800 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:44] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:45,300 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:48:45,301 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:45] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:49,684 - INFO - Sending false reject to master for message Msg1 with proposal number 1
+2024-10-28 20:48:49,685 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:49] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:50,844 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:50] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:51,280 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:51] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:48:52,729 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:52] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:57,194 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:57] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:48:59,185 - INFO - 172.20.0.4 - - [28/Oct/2024 20:48:59] "POST /accept HTTP/1.1" 200 -
+2024-10-28 20:49:01,286 - INFO - 172.20.0.4 - - [28/Oct/2024 20:49:01] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:49:11,291 - INFO - 172.20.0.4 - - [28/Oct/2024 20:49:11] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:49:21,302 - INFO - 172.20.0.4 - - [28/Oct/2024 20:49:21] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:49:31,308 - INFO - 172.20.0.4 - - [28/Oct/2024 20:49:31] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:49:41,314 - INFO - 172.20.0.4 - - [28/Oct/2024 20:49:41] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:49:51,319 - INFO - 172.20.0.4 - - [28/Oct/2024 20:49:51] "POST /heartbeat HTTP/1.1" 200 -
+2024-10-28 20:50:01,326 - INFO - 172.20.0.4 - - [28/Oct/2024 20:50:01] "POST /heartbeat HTTP/1.1" 200 -

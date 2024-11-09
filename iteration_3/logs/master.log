@@ -1,0 +1,275 @@
+2024-10-28 20:46:51,161 - INFO - Starting HTTP connection at Master
+2024-10-28 20:46:51,171 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.20.0.4:9000
+2024-10-28 20:46:51,173 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-28 20:46:54,174 - ERROR - Error during heartbeat to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:47:19,406 - INFO - Received message: Msg1. Assigning proposal_number: 1. Adding to queue for replication with write_concern: 1
+2024-10-28 20:47:19,406 - INFO - Send prepare for message: Msg1 to all nodes with proposal_number: 1 and write_concern: 1
+2024-10-28 20:47:19,412 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
+2024-10-28 20:47:19,412 - INFO - Message 'Msg1' with proposal number 1 added to output list on master.
+2024-10-28 20:47:19,416 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:47:19,416 - INFO - 172.20.0.1 - - [28/Oct/2024 20:47:19] "POST /send_data HTTP/1.1" 200 -
+2024-10-28 20:47:21,387 - ERROR - Error during heartbeat to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:47:22,415 - ERROR - Error during prepare to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:47:22,415 - INFO - Failed to get response from http://secondary_2:9002/ during prepare phase
+2024-10-28 20:47:22,422 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:47:22,422 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:22,423 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 2, with delay 3.4955003101806215 s
+2024-10-28 20:47:22,501 - INFO - Received message: Msg2. Assigning proposal_number: 2. Adding to queue for replication with write_concern: 2
+2024-10-28 20:47:22,501 - INFO - Send prepare for message: Msg2 to all nodes with proposal_number: 2 and write_concern: 2
+2024-10-28 20:47:22,508 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
+2024-10-28 20:47:22,508 - INFO - Message 'Msg2' with proposal number 2 added to output list on master.
+2024-10-28 20:47:22,515 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:22,516 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:47:22,516 - INFO - 172.20.0.1 - - [28/Oct/2024 20:47:22] "POST /send_data HTTP/1.1" 200 -
+2024-10-28 20:47:22,637 - ERROR - Error during accept to http://secondary_2:9002/: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-28 20:47:22,637 - ERROR - Error during prepare to http://secondary_2:9002/: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-28 20:47:22,638 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:22,638 - INFO - Failed to get response from http://secondary_2:9002/ during prepare phase
+2024-10-28 20:47:22,639 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 2, with delay 3.2187044844481116 s
+2024-10-28 20:47:24,549 - INFO - Received message: Msg3. Assigning proposal_number: 3. Adding to queue for replication with write_concern: 3
+2024-10-28 20:47:24,550 - INFO - Send prepare for message: Msg3 to all nodes with proposal_number: 3 and write_concern: 3
+2024-10-28 20:47:24,557 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
+2024-10-28 20:47:24,557 - INFO - Message 'Msg3' with proposal number 3 added to output list on master.
+2024-10-28 20:47:24,566 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:25,871 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:47:25,924 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:47:25,927 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:26,243 - ERROR - Error during heartbeat to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /heartbeat (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a682de20>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:27,866 - ERROR - Error during prepare to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /prepare (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e3df0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:27,866 - INFO - Failed to get response from http://secondary_2:9002/ during prepare phase
+2024-10-28 20:47:27,868 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e3820>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:27,869 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:27,870 - INFO - Failed to replicate message: Msg3 with proposal_number: 3 and write concern 3 Starting retry, attempt № 2, with delay 3.3639682013854504 s
+2024-10-28 20:47:29,177 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6847a00>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:29,178 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:29,179 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 3, with delay 3.2228248811002884 s
+2024-10-28 20:47:29,235 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290640>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:29,235 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:29,236 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 3, with delay 3.2224157825036395 s
+2024-10-28 20:47:29,761 - INFO - Received message: Msg4. Assigning proposal_number: 4. Adding to queue for replication with write_concern: 1
+2024-10-28 20:47:29,761 - INFO - Send prepare for message: Msg4 to all nodes with proposal_number: 4 and write_concern: 1
+2024-10-28 20:47:29,769 - INFO - Quorum reached. 1 nodes send promises. Sending accept requests.
+2024-10-28 20:47:29,769 - INFO - Message 'Msg4' with proposal number 4 added to output list on master.
+2024-10-28 20:47:29,773 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:47:29,774 - INFO - 172.20.0.1 - - [28/Oct/2024 20:47:29] "POST /send_data HTTP/1.1" 200 -
+2024-10-28 20:47:31,865 - ERROR - Error during heartbeat to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /heartbeat (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6847730>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:32,419 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:32,420 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:47:32,465 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:47:33,067 - ERROR - Error during prepare to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /prepare (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a42904f0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:33,067 - INFO - Failed to get response from http://secondary_2:9002/ during prepare phase
+2024-10-28 20:47:33,076 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6847bb0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:33,076 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:33,077 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 2, with delay 3.1361959378414483 s
+2024-10-28 20:47:34,539 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a682a160>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:34,540 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:34,543 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:47:34,546 - INFO - 172.20.0.1 - - [28/Oct/2024 20:47:34] "POST /send_data HTTP/1.1" 200 -
+2024-10-28 20:47:34,547 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 3, with delay 3.70756091808878 s
+2024-10-28 20:47:35,719 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a68380a0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:35,721 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:35,723 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 4, with delay 3.8365998636831096 s
+2024-10-28 20:47:35,761 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e39d0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:35,761 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:35,762 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 4, with delay 3.125394516917738 s
+2024-10-28 20:47:36,217 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:47:36,221 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:38,891 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:47:38,895 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:39,524 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e3bb0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:39,524 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:39,525 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 3, with delay 3.8032353599258077 s
+2024-10-28 20:47:39,568 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:47:41,564 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a42a2b20>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:41,565 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:41,566 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:47:41,568 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 4, with delay 3.9059840272820354 s
+2024-10-28 20:47:41,747 - ERROR - Error during heartbeat to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /heartbeat (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e4490>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:41,747 - INFO - http://secondary_2:9002/ marked as Unhealthy Next retry in 24.210613923901622 s
+2024-10-28 20:47:42,202 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a42a2520>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:42,203 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:42,204 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 5, with delay 3.480293907864886 s
+2024-10-28 20:47:42,863 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6847c10>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:42,863 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:42,863 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 5, with delay 3.4734276554074315 s
+2024-10-28 20:47:43,341 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:47:45,694 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:47:46,354 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:47:46,503 - INFO - 172.20.0.1 - - [28/Oct/2024 20:47:46] "GET / HTTP/1.1" 200 -
+2024-10-28 20:47:46,643 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290a60>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:46,644 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:46,644 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 4, with delay 3.030061715691988 s
+2024-10-28 20:47:48,778 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e3df0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:48,778 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:48,779 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:47:48,779 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 5, with delay 3.5859403661363243 s
+2024-10-28 20:47:49,012 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e4160>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:49,013 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:49,014 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 6, with delay 3.058950957238657 s
+2024-10-28 20:47:49,633 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290ac0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:49,633 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:49,633 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 6, with delay 3.2184209494655462 s
+2024-10-28 20:47:49,677 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:47:52,080 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:47:52,087 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:52,858 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:47:52,859 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:47:52,977 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6837070>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:52,977 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:52,977 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 5, with delay 3.4073842067659026 s
+2024-10-28 20:47:55,380 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a422b3a0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:55,381 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:55,381 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 7, with delay 3.531292480084725 s
+2024-10-28 20:47:55,677 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6838550>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:55,679 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:55,680 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:47:55,681 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 6, with delay 3.6474699042819734 s
+2024-10-28 20:47:56,169 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6829d60>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:56,169 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:56,169 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 7, with delay 3.8596752614838548 s
+2024-10-28 20:47:56,397 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:47:58,916 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:47:59,720 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290910>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:47:59,721 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:47:59,722 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 6, with delay 3.237065892891755 s
+2024-10-28 20:48:00,048 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:00,049 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:02,212 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a682e5b0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:02,212 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:02,213 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 8, with delay 3.164585342679798 s
+2024-10-28 20:48:02,643 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a422d130>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:02,644 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:02,644 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:48:02,644 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 7, with delay 3.1781426370296875 s
+2024-10-28 20:48:02,964 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:48:03,341 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a684b160>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:03,342 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:03,342 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 8, with delay 3.231796088477431 s
+2024-10-28 20:48:05,382 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:05,386 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:06,290 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6845f40>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:06,291 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:06,291 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 7, with delay 3.060095790194451 s
+2024-10-28 20:48:06,582 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:06,583 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:08,668 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6837a60>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:08,669 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:08,669 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 9, with delay 3.8337345303441435 s
+2024-10-28 20:48:09,136 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a5322f40>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:09,137 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:09,137 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:48:09,138 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 8, with delay 3.7744283139024057 s
+2024-10-28 20:48:09,258 - ERROR - Error during heartbeat to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /heartbeat (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e40a0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:09,354 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:48:09,883 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6847f10>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:09,883 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:09,883 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 9, with delay 3.9610804858305024 s
+2024-10-28 20:48:12,506 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:12,658 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290eb0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:12,658 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:12,658 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 8, with delay 3.5578173695739386 s
+2024-10-28 20:48:13,859 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:13,859 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:15,797 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6838880>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:15,797 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:15,798 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 10, with delay 3.741188052420932 s
+2024-10-28 20:48:16,221 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a68381f0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:16,223 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:48:16,224 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:16,225 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:48:16,225 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 9, with delay 3.3290875066269616 s
+2024-10-28 20:48:17,155 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290130>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:17,156 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:17,157 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 10, with delay 3.180217747612788 s
+2024-10-28 20:48:19,542 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6829dc0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:19,552 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:19,553 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:19,555 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 9, with delay 3.191757660692077 s
+2024-10-28 20:48:20,345 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:22,759 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:48:22,763 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:22,878 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a67e39a0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:22,879 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:22,880 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 11, with delay 3.0635202506427315 s
+2024-10-28 20:48:22,894 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290ca0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:22,894 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:22,896 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:48:22,897 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 10, with delay 3.689243285173644 s
+2024-10-28 20:48:23,670 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a422ba90>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:23,670 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:23,671 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 11, with delay 3.5057977848599564 s
+2024-10-28 20:48:25,958 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:25,970 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:26,060 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a682e1c0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:26,061 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:26,061 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 10, with delay 3.28559844372371 s
+2024-10-28 20:48:27,183 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:29,270 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6838520>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:29,271 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:29,271 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 12, with delay 3.581513839371148 s
+2024-10-28 20:48:29,352 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:48:29,359 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:29,905 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6837340>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:29,905 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:29,905 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:48:29,905 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 11, with delay 3.0301197637149695 s
+2024-10-28 20:48:30,464 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a422bf10>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:30,465 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:30,466 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 12, with delay 3.8490923225491462 s
+2024-10-28 20:48:32,668 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a4290340>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:32,669 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:32,669 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 11, with delay 3.7233640931571252 s
+2024-10-28 20:48:32,863 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:34,320 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13a682d850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-10-28 20:48:34,320 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:34,320 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:34,323 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 13, with delay 3.8246651335117643 s
+2024-10-28 20:48:36,175 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a682d760>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:36,176 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:36,176 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 13, with delay 3.8447813596511384 s
+2024-10-28 20:48:36,233 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Max retries exceeded with url: /accept (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f13a6847fa0>: Failed to resolve 'secondary_2' ([Errno -2] Name or service not known)"))
+2024-10-28 20:48:36,233 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:36,233 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:48:36,233 - INFO - Failed to replicate Message 'Msg3' with proposal number 3 and write concern 3 to all nodes. Starting retry, attempt № 12, with delay 3.3496722801394467 s
+2024-10-28 20:48:36,398 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:48:38,168 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:39,403 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:48:39,404 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:39,410 - INFO - Failed to replicate Message 'Msg4' with proposal number 4 and write concern 1 to all nodes. Starting retry, attempt № 12, with delay 3.8053644438269356 s
+2024-10-28 20:48:39,609 - INFO - Successfully replicated message: Msg3 with proposal_number: 3 and write concern 3
+2024-10-28 20:48:39,610 - INFO - Message 'Msg3' with proposal number 3 and write concern 3 is replicated to all nodes.
+2024-10-28 20:48:40,034 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:40,044 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:41,167 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:48:41,167 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:41,168 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 14, with delay 3.614181139461112 s
+2024-10-28 20:48:42,048 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 14, with delay 3.2453463674175045 s
+2024-10-28 20:48:43,229 - INFO - Successfully replicated message: Msg4 with proposal_number: 4 and write concern 1
+2024-10-28 20:48:44,804 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:45,244 - INFO - Message 'Msg4' with proposal number 4 and write concern 1 is replicated to all nodes.
+2024-10-28 20:48:45,298 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:45,302 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:46,309 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:46,309 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 15, with delay 3.3694675563971797 s
+2024-10-28 20:48:47,802 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:48:47,802 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:47,803 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 15, with delay 3.0237658686469366 s
+2024-10-28 20:48:49,683 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:49,686 - INFO - Failed to get response from http://secondary_1:9001/ during accept phase
+2024-10-28 20:48:49,687 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 16, with delay 3.03619390552874 s
+2024-10-28 20:48:50,849 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:52,727 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:53,846 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:48:53,847 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:53,847 - INFO - Failed to replicate Message 'Msg2' with proposal number 2 and write concern 2 to all nodes. Starting retry, attempt № 16, with delay 3.3384123257365834 s
+2024-10-28 20:48:55,732 - ERROR - Error during accept to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)
+2024-10-28 20:48:55,732 - INFO - Failed to get response from http://secondary_2:9002/ during accept phase
+2024-10-28 20:48:55,733 - INFO - Failed to replicate Message 'Msg1' with proposal number 1 and write concern 1 to all nodes. Starting retry, attempt № 17, with delay 3.4362207549246913 s
+2024-10-28 20:48:57,196 - INFO - Successfully replicated message: Msg2 with proposal_number: 2 and write concern 2
+2024-10-28 20:48:58,199 - INFO - Message 'Msg2' with proposal number 2 and write concern 2 is replicated to all nodes.
+2024-10-28 20:48:59,175 - INFO - Successfully replicated message: Msg1 with proposal_number: 1 and write concern 1
+2024-10-28 20:48:59,191 - INFO - Message 'Msg1' with proposal number 1 and write concern 1 is replicated to all nodes.
+2024-10-28 20:50:26,892 - ERROR - Error during heartbeat to http://secondary_2:9002/: HTTPConnectionPool(host='secondary_2', port=9002): Read timed out. (read timeout=3)

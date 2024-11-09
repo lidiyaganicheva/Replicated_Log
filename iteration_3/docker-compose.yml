@@ -1,0 +1,43 @@
+services:
+  master:
+    image: python-app
+    container_name: master
+    ports:
+      - "9000:9000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SECONDARY_HOSTS: secondary_1:9001,secondary_2:9002
+      REQUEST_TIMEOUT: 3
+      WAIT_FOR_RETRY: 3
+    command: ["python", "master.py"]
+
+  secondary_1:
+    image: python-app
+    container_name: secondary_1
+    ports:
+      - "9001:9001"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      CONT_NAME: 'secondary_1'
+      PORT_NUMBER: 9001
+      TIMEOUT: 'false'
+    command: ["python", "secondary.py"]
+
+  secondary_2:
+    image: python-app
+    container_name: secondary_2
+    ports:
+      - "9002:9002"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      CONT_NAME: 'secondary_2'
+      PORT_NUMBER: 9002
+      TIMEOUT: 'true'
+    command: ["python", "secondary.py"]
+
